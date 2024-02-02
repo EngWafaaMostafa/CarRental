@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\AdminsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,7 @@ use App\Http\Controllers\CarController;
 //     return view('welcome');
 // });
 Route::get('/', [CarController::class, 'index'])->name('index');
+//Auth::routes(["verify" => true]);
+Route::get('adduser', [AdminsController::class, 'create'])->name('adduser');
+Route::post('adduser', [AdminsController::class, 'store'])->name('adduser');
+Route::get('users', [AdminsController::class, 'index'])->name('users');
