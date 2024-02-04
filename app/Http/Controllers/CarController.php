@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use App\Traits\Common;
 
 class CarController extends Controller
 {
+    use Common;
     public function index()
     {
-        return view('index');
-        //  $cars = Car::get();
-        // return view('Cars', compact("cars"));
+
+        //return view('index');
+        $cars = Car::get();
+        return view('cars', compact("cars"));
     }
     public function create()
     {
@@ -28,7 +31,7 @@ class CarController extends Controller
 
         $data['active'] = isset($request->active);
         Car::create($data);
-        return redirect('Cars');
+        return redirect('cars');
         //Alert::success("Add ","Add Successfully");
         //return redirect()->back();
 

@@ -36,7 +36,7 @@ Route::get('deletecategory/{id}', [CategoriesController::class, 'destroy']);
 
 Route::get('addcar', [CarController::class, 'create'])->name('addcar');
 Route::post('addcar', [CarController::class, 'store'])->name('addcar');
-//Route::get('cars', [CarController::class, 'index'])->name('cars');
+Route::get('cars', [CarController::class, 'index'])->name('cars');
 //Route::get('updatecar/{id}', [CarController::class, 'edit']);
 //Route::put('updatecar/{id}', [CarController::class, 'update'])->name('updatecar');
-//Route::get('deletecar/{id}', [CarController::class, 'destroy']);
+Route::get('deletecar/{id}', [CarController::class, 'destroy']);

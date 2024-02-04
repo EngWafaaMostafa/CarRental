@@ -12,23 +12,23 @@
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset('admin/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="{{asset('admin/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="{{asset('admin/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
     <!-- Datatables -->
 
-    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="{{asset('admin/build/css/custom.min.css')}}" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -45,7 +45,7 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            <img src="{{asset('admin/images/img.jpg')}}" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -63,20 +63,20 @@
                             <ul class="nav side-menu">
                                 <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="users.html">Users List</a></li>
-                                        <li><a href="addUser.html">Add User</a></li>
+                                        <li><a href="{{ route('users') }}">Users List</a></li>
+                                        <li><a href="{{ route('adduser') }}">Add User</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-edit"></i> Categories <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="addCategory.html">Add Category</a></li>
-                                        <li><a href="categories.html">Categories List</a></li>
+                                        <li><a href="{{ route('addcategory') }}">Add Category</a></li>
+                                        <li><a href="{{ route('categories') }}">Categories List</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> Cars <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="addCar.html">Add Car</a></li>
-                                        <li><a href="cars.html">Cars List</a></li>
+                                        <li><a href="{{route('addcar')}}">Add Car</a></li>
+                                        <li><a href="{{route('cars')}}">Cars List</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> Testimonials <span class="fa fa-chevron-down"></span></a>
@@ -125,7 +125,7 @@
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/img.jpg" alt="">John Doe
+                                    <img src="{{asset('admin/images/img.jpg')}}" alt="">John Doe
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="javascript:;"> Profile</a>
@@ -146,7 +146,7 @@
                                 <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{asset('admin/images/img.jpg')}}" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -158,7 +158,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{asset('admin/images/img.jpg')}}" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -170,7 +170,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{asset('admin/images/img.jpg')}}" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -182,7 +182,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="{{asset('admin/images/img.jpg')}}" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -267,28 +267,15 @@
 
 
                                                     <tbody>
+                                                        @foreach($cars as $cars)
                                                         <tr>
-                                                            <td>Car 10</td>
-                                                            <td>250</td>
-                                                            <td>Yes</td>
-                                                            <td><img src="./images/edit.png" alt="Edit"></td>
-                                                            <td><img src="./images/delete.png" alt="Delete"></td>
+                                                            <td>{{$cars->title}}</td>
+                                                            <td>{{$cars->price}}</td>
+                                                            <td>{{$cars->active?'Yes':'No'}}</td>
+                                                            <td><a href="updatecar/{{$cars->id}}"><img src="{{asset('admin/images/edit.png')}}" alt="Edit"></td>
+                                                            <td><a href="deletecar/{{$cars->id}}"><img src="{{asset('admin/images/delete.png')}}" alt="Delete"></td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>Car 1</td>
-                                                            <td>150</td>
-                                                            <td>Yes</td>
-                                                            <td><img src="./images/edit.png" alt="Edit"></td>
-                                                            <td><img src="./images/delete.png" alt="Delete"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Car 2</td>
-                                                            <td>200</td>
-                                                            <td>Yes</td>
-                                                            <td><img src="./images/edit.png" alt="Edit"></td>
-                                                            <td><img src="./images/delete.png" alt="Delete"></td>
-                                                        </tr>
-
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -314,34 +301,34 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="{{asset('admin/vendors/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('admin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="{{asset('admin/vendors/fastclick/lib/fastclick.js')}}"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="{{asset('admin/vendors/nprogress/nprogress.js')}}"></script>
     <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
+    <script src="{{asset('admin/vendors/iCheck/icheck.min.js')}}"></script>
     <!-- Datatables -->
-    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-    <script src="vendors/jszip/dist/jszip.min.js"></script>
-    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="{{asset('admin/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+    <script src="{{asset('admin/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/jszip/dist/jszip.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="{{asset('admin/build/js/custom.min.js')}}"></script>
 
 </body>
 
