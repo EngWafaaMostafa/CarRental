@@ -8,10 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Users</title>
+    <title>Rent Car Admin | Add Category</title>
 
     <!-- Bootstrap -->
-    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link href="{{asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{asset('admin/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -19,13 +18,16 @@
     <link href="{{asset('admin/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{asset('admin/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
-    <!-- Datatables -->
-
-    <link href="{{asset('admin/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="{{asset('admin/vendors/google-code-prettify/bin/prettify.min.css')}}" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="{{asset('admin/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="{{asset('admin/vendors/switchery/dist/switchery.min.css')}}" rel="stylesheet">
+    <!-- starrr -->
+    <link href="{{asset('admin/vendors/starrr/dist/starrr.css')}}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="{{asset('admin/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="{{asset('admin/build/css/custom.min.css')}}" rel="stylesheet">
@@ -37,7 +39,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="{{route('index')}}" class="site_title"><i class="fa fa-car"></i></i> <span>Rent Car Admin</span></a>
+                        <a href="index.html" class="site_title"><i class="fa fa-car"></i> <span>Rent Car Admin</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -64,7 +66,6 @@
                                 <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="{{ route('users') }}">Users List</a></li>
-
                                         <li><a href="{{ route('adduser') }}">Add User</a></li>
                                     </ul>
                                 </li>
@@ -78,6 +79,17 @@
                                     <ul class="nav child_menu">
                                         <li><a href="addCar.html">Add Car</a></li>
                                         <li><a href="cars.html">Cars List</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i> Testimonials <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="addTestimonials.html">Add Testimonials</a></li>
+                                        <li><a href="testimonials.html">Edit Testimonials</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i> Messages <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="messages.html">Messages</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -203,37 +215,37 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Manage Users</h3>
+                            <h3>Manage Categories</h3>
                         </div>
 
                         <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <div class="col-md-5 col-sm-5  form-group pull-right top_search">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search for...">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">Go!</button>
+                                        <button class="btn btn-default" type="button">Go!</button>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="clearfix"></div>
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12 ">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>List of Users</h2>
+                                    <h2>Add Category</h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Settings 1</a>
-                                                <a class="dropdown-item" href="#">Settings 2</a>
-                                            </div>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a class="dropdown-item" href="#">Settings 1</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li><a class="close-link"><i class="fa fa-close"></i></a>
                                         </li>
@@ -241,45 +253,31 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card-box table-responsive">
-                                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Registration Date</th>
-                                                            <th>Name</th>
-                                                            <th>Username</th>
-                                                            <th>Email</th>
-                                                            <th>Active</th>
-                                                            <th>Edit</th>
-
-
-                                                        </tr>
-                                                    </thead>
-
-
-                                                    <tbody>
-                                                        @foreach($Admins as $Admins)
-                                                        <tr>
-                                                            <td>{{$Admins->created_at->format('Y-m-d')}}</td>
-                                                            <td>{{$Admins->fullname}}</td>
-                                                            <td>{{$Admins->username}}</td>
-                                                            <td>{{$Admins->email}}</td>
-                                                            <td>{{$Admins->active ?'Yes':'No'}}</td>
-                                                            <td><a href="updateuser/{{$Admins->id}}"><img src="{{asset('admin/images/edit.png')}}" alt="Edit"></a></td>
-                                                            <!-- <td><img src="./images/edit.png" alt="Edit"></td> -->
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
+                                    <br />
+                                    <form action="{{route('addcategory')}}" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                        @csrf
+                                        <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="add-category">Add Category <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 ">
+                                                <input type="text" id="add-category" required="required" class="form-control " name="category">
                                             </div>
                                         </div>
-                                    </div>
+
+                                        <div class="ln_solid"></div>
+                                        <div class="item form-group">
+                                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                                <button class="btn btn-primary" type="button">Cancel</button>
+                                                <button type="submit" class="btn btn-success">Add</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- /page content -->
@@ -287,7 +285,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">wafaa mostafa</a>
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
@@ -303,28 +301,33 @@
     <script src="{{asset('admin/vendors/fastclick/lib/fastclick.js')}}"></script>
     <!-- NProgress -->
     <script src="{{asset('admin/vendors/nprogress/nprogress.js')}}"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="{{asset('admin/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
     <!-- iCheck -->
     <script src="{{asset('admin/vendors/iCheck/icheck.min.js')}}"></script>
-    <!-- Datatables -->
-    <script src="{{asset('admin/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
-    <script src="{{asset('admin/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/jszip/dist/jszip.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
-    <script src="{{asset('admin/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
-
+    <!-- bootstrap-daterangepicker -->
+    <script src="{{asset('admin/vendors/moment/min/moment.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="{{asset('admin/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')}}"></script>
+    <script src="{{asset('admin/vendors/jquery.hotkeys/jquery.hotkeys.js')}}"></script>
+    <script src="{{asset('admin/vendors/google-code-prettify/src/prettify.js')}}"></script>
+    <!-- jQuery Tags Input -->
+    <script src="{{asset('admin/vendors/jquery.tagsinput/src/jquery.tagsinput.js')}}"></script>
+    <!-- Switchery -->
+    <script src="{{asset('admin/vendors/switchery/dist/switchery.min.js')}}"></script>
+    <!-- Select2 -->
+    <script src="{{asset('admin/vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <!-- Parsley -->
+    <script src="{{asset('admin/vendors/parsleyjs/dist/parsley.min.js')}}"></script>
+    <!-- Autosize -->
+    <script src="{{asset('admin/vendors/autosize/dist/autosize.min.js')}}"></script>
+    <!-- jQuery autocomplete -->
+    <script src="{{asset('admin/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
+    <!-- starrr -->
+    <script src="{{asset('admin/vendors/starrr/dist/starrr.js')}}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('admin/build/js/custom.min.js')}}"></script>
-
 
 </body>
 

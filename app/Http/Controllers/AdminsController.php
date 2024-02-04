@@ -52,7 +52,9 @@ class AdminsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $users = Admin::get();
+        $user = Admin::findOrFail($id);
+        return view('updateuser', compact('user', 'users'));
     }
 
     /**
@@ -60,7 +62,10 @@ class AdminsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->only("username", "fullname", "email", "active", "password");
+        $data["active"] = isset($request->active);
+        Admin::where('id', $id)->update($data);
+        return redirect('users');
     }
 
     /**
