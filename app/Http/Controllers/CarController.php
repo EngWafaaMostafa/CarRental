@@ -12,15 +12,12 @@ class CarController extends Controller
     use Common;
     public function index()
     {
-
-        //return view('index');
         $cars = Car::get();
         return view('cars', compact("cars"));
     }
     public function create()
     {
         $categories = Category::get();
-
         return view('addcar', compact('categories'));
     }
     public function store(Request $request)
@@ -43,22 +40,24 @@ class CarController extends Controller
     }
     public function edit(string $id)
     {
-        $cars = Car::get();
+        $categories = Category::get();
         $car = Car::findOrFail($id);
-        return view('updatecar', compact('car', 'cars'));
+        return view('updatecar', compact('car', 'categories'));
     }
     public function update(Request $request, string $id)
     {
         $data = $request->only("title", "content", "luggage", "active", "doors", "passengers", "price", "image", "category_id");
-        $data["active"] = isset($request->active);
+        //dd($data);
         if ($request->hasFile('image')) {
             $fileName = $this->uploadFile($request->image, 'assets/images');
             $data['image'] = $fileName;
             // unlink("assets/images/" . $request->oldImage);
         }
+        $data["active"] = isset($request->active);
         Car::where('id', $id)->update($data);
         return redirect('cars');
     }
+
     public function destroy(string $id)
     {
         Car::where('id', $id)->delete();

@@ -21,7 +21,7 @@ class AdminsController extends Controller
      */
     public function create()
     {
-        return view('Adduser');
+        return view('adduser');
     }
 
     /**
