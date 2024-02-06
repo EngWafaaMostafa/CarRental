@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\AdminsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\TestmonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,10 @@ Route::get('cars', [CarController::class, 'index'])->name('cars');
 Route::get('updatecar/{id}', [CarController::class, 'edit']);
 Route::put('updatecar/{id}', [CarController::class, 'update'])->name('updatecar');
 Route::get('deletecar/{id}', [CarController::class, 'destroy']);
+
+Route::get('addtestmonial', [TestmonialController::class, 'create'])->name('addtestmonial');
+Route::post('addtestmonial', [TestmonialController::class, 'store'])->name('addtestmonial');
+Route::get('testmonials', [TestmonialController::class, 'index'])->name('testmonials');
+Route::get('updatetestmonial/{id}', [TestmonialController::class, 'edit']);
+Route::put('updatetestmonial/{id}', [TestmonialController::class, 'update'])->name('updatetestmonial');
+Route::get('deletetestmonial/{id}', [TestmonialController::class, 'destroy']);

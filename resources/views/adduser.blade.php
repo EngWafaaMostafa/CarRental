@@ -83,8 +83,8 @@
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> Testimonials <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="addTestimonials.html">Add Testimonials</a></li>
-                                        <li><a href="testimonials.html">Edit Testimonials</a></li>
+                                        <li><a href="{{route('addtestmonial')}}">Add Testimonials</a></li>
+                                        <li><a href="{{route('testmonials')}}">Edit Testimonials</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> Messages <span class="fa fa-chevron-down"></span></a>
