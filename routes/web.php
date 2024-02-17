@@ -20,7 +20,8 @@ use App\Http\Controllers\TestmonialController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [CarController::class, 'index'])->name('index');
+//Route::get('/', [CarController::class, 'index'])->name('index');
+
 //Auth::routes(["verify" => true]);
 Route::get('adduser', [AdminsController::class, 'create'])->name('adduser');
 Route::post('adduser', [AdminsController::class, 'store'])->name('adduser');
@@ -48,3 +49,29 @@ Route::get('testmonials', [TestmonialController::class, 'index'])->name('testmon
 Route::get('updatetestmonial/{id}', [TestmonialController::class, 'edit']);
 Route::put('updatetestmonial/{id}', [TestmonialController::class, 'update'])->name('updatetestmonial');
 Route::get('deletetestmonial/{id}', [TestmonialController::class, 'destroy']);
+
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
+Route::get('about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('index', function () {
+    return view('index');
+})->name('index');
+
+Route::get('blog', function () {
+    return view('blog');
+})->name('blog');
+
+
+Route::get('listing', function () {
+    return view('listing');
+})->name('listing');
+
+Route::get('testimonials', function () {
+    return view('testimonials');
+})->name('testimonials');
