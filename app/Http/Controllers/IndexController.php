@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::get();
+        return view('message', compact('contacts'));
     }
 
     /**
@@ -55,7 +56,8 @@ class IndexController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $contacts = Contact::findOrFail($id);
+        return view('showmessage', compact('contacts'));
     }
 
     /**

@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Categories</title>
+    <title>Show Messages</title>
 
     <!-- Bootstrap -->
+    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link href="{{asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{asset('admin/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -18,16 +19,13 @@
     <link href="{{asset('admin/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{asset('admin/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="{{asset('admin/vendors/google-code-prettify/bin/prettify.min.css')}}" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="{{asset('admin/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="{{asset('admin/vendors/switchery/dist/switchery.min.css')}}" rel="stylesheet">
-    <!-- starrr -->
-    <link href="{{asset('admin/vendors/starrr/dist/starrr.css')}}" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="{{asset('admin/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+    <!-- Datatables -->
+
+    <link href="{{asset('admin/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="{{asset('admin/build/css/custom.min.css')}}" rel="stylesheet">
@@ -39,7 +37,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="{{route('index')}}" class="site_title"><i class="fa fa-car"></i></i> <span>Rent Car Admin</span></a>
+                        <a href="index.html" class="site_title"><i class="fa fa-car"></i></i> <span>Rent Car Admin</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -215,7 +213,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Manage Categories</h3>
+                            <h3>Manage Messages</h3>
                         </div>
 
                         <div class="title_right">
@@ -235,54 +233,14 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 ">
                             <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>List of Categories</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Settings 1</a>
-                                                <a class="dropdown-item" href="#">Settings 2</a>
-                                            </div>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card-box table-responsive">
-
-                                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Category Name</th>
-                                                            <th>Edit</th>
-                                                            <th>Delete</th>
-                                                        </tr>
-                                                    </thead>
-
-
-                                                    <tbody>
-
-                                                        @foreach($categories as $categories)
-                                                        <tr>
-                                                            <td>{{$categories->category}}</td>
-                                                            <td><a href="updatecategory/{{$categories->id}}"><img src="{{asset('admin/images/edit.png')}}" alt="Edit"></td>
-                                                            <td><a href="deletecategory/{{$categories->id}}"><img src="{{asset('admin/images/delete.png')}}" alt="Delete"></td>
-                                                        </tr>
-                                                        @endforeach
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h2>First Name: {{$contacts->fname}}</h2>
+                                <br>
+                                <h2>Lname Name: {{$contacts->lname}}</h2>
+                                <br>
+                                <h2>Email: {{$contacts->email}}</h2>
+                                <br>
+                                <h2>Message Content:</h2>
+                                <p>{{$contacts->message}}</p>
                             </div>
                         </div>
                     </div>
@@ -293,7 +251,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">wafaa mostafa</a>
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
@@ -329,7 +287,7 @@
     <script src="{{asset('admin/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{asset('admin/build/js/custom.min.js')}}"></script>
+    <script src="{{asset('admin/build/$1.js')}}"></script>
 
 </body>
 

@@ -81,3 +81,6 @@ Route::get('single/{id}', [CarController::class, 'show'])->name('single');
 Route::post('sendcontact', [IndexController::class, 'sendcontact'])->name('sendcontact');
 //Route::get('sendcontact', [IndexController::class, 'create'])->name('sendcontact');
 Route::post('sendcontact', [IndexController::class, 'store'])->name('sendcontact');
+
+Route::get('message', [IndexController::class, 'index'])->name('message');
+Route::get('showmessage/{id}', [IndexController::class, 'show'])->name('showmessage');
