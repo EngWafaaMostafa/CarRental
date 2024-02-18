@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Car;
+
+use App\Models\Contact;
 use Illuminate\Http\Request;
-use App\Traits\Common;
+
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -14,9 +16,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //$cars = Car::get();
-        $cars = Car::latest()->take(6)->get();
-        return view('index', compact("cars"));
+        //
     }
 
     /**
@@ -24,15 +24,30 @@ class IndexController extends Controller
      */
     public function create()
     {
-        //
+        $data = Contact::get();
+        return view('contact', compact('data'));
     }
-
+    public function sendcontact(Request $request)
+    {
+        //return 'send contact us' . $request->fname;
+        $data = $request->only("fname", "lname", "email", "message");
+        Mail::to('info@email.com')->send(
+            new ContactMail($data)
+        );
+        return "mail sent!";
+    }
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only("fname", "lname", "email", "message");
+        Contact::create($data);
+        Mail::to('info@email.com')->send(
+            new ContactMail($data)
+        );
+        return "mail sent!";
+        //return redirect('categories');
     }
 
     /**

@@ -78,3 +78,6 @@ Route::get('showtestimonials', [TestmonialController::class, 'list'])->name('sho
 Route::get('single/{id}', [CarController::class, 'show'])->name('single');
 //Route::get('single', [CategoriesController::class, 'list'])->name('singlecat');
 //Route::get('single', [CategoriesController::class, 'index'])->name('single');
+Route::post('sendcontact', [IndexController::class, 'sendcontact'])->name('sendcontact');
+//Route::get('sendcontact', [IndexController::class, 'create'])->name('sendcontact');
+Route::post('sendcontact', [IndexController::class, 'store'])->name('sendcontact');

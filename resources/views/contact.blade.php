@@ -101,7 +101,8 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mb-5">
-                        <form action="#" method="post">
+                        <form action="{{route('sendcontact')}}" method="post">
+                            @csrf
                             <div class="form-group row">
                                 <div class="col-md-6 mb-4 mb-lg-0">
                                     <input type="text" class="form-control" placeholder="First name" name="fname">
