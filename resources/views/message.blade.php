@@ -277,6 +277,8 @@
                                                         </tr>
 
                                                         @endforeach
+
+
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -293,7 +295,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">wafaa mostafa</a>
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
@@ -329,7 +331,7 @@
     <script src="{{asset('admin/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{asset('admin/build/$1.js')}}"></script>
+    <script src="{{asset('admin/build/js/custom.min.js')}}"></script>
 
 </body>
 

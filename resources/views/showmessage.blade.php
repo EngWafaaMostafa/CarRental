@@ -37,7 +37,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-car"></i></i> <span>Rent Car Admin</span></a>
+                        <a href="{{route('index')}}" class="site_title"><i class="fa fa-car"></i></i> <span>Rent Car Admin</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -235,12 +235,12 @@
                             <div class="x_panel">
                                 <h2>First Name: {{$contacts->fname}}</h2>
                                 <br>
-                                <h2>Lname Name: {{$contacts->lname}}</h2>
+                                <h2>First Name: {{$contacts->lname}}</h2>
                                 <br>
                                 <h2>Email: {{$contacts->email}}</h2>
                                 <br>
                                 <h2>Message Content:</h2>
-                                <p>{{$contacts->message}}</p>
+                                <p> {{$contacts->message}}</p>
                             </div>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
     <script src="{{asset('admin/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{asset('admin/build/$1.js')}}"></script>
+    <script src="{{asset('admin/build/js/custom.min.js')}}"></script>
 
 </body>
 
