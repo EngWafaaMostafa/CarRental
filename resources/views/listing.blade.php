@@ -58,7 +58,7 @@
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
                                 <li><a href="{{route('index')}}" class="nav-link">Home</a></li>
                                 <li><a href="{{route('listing')}}" class="nav-link">Listing</a></li>
-                                <li><a href="{{route('testimonials')}}" class="nav-link">Testimonials</a></li>
+                                <li><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                                 <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                                 <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -107,68 +107,35 @@
 
 
                 <div class="row">
+                    @foreach($cars as $cars)
                     <div class="col-md-6 col-lg-4 mb-4">
 
                         <div class="listing d-block  align-items-stretch">
                             <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_6.jpg')}}" alt="Image" class="img-fluid">
+                                <img src="{{asset('assets/images/'.$cars->image)}}" alt="Image" class="img-fluid">
+                                <input type="hidden" name="oldImage" value="{{$cars->image}}">
                             </div>
                             <div class="listing-contents h-100">
                                 <h3>Mitsubishi Pajero</h3>
                                 <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
+                                    <strong>{{$cars->price}}</strong><span class="mx-1">/</span>day
                                 </div>
                                 <div class="d-block d-md-flex mb-3 border-bottom pb-3">
                                     <div class="listing-feature pr-4">
                                         <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
+                                        <span class="number">{{$cars->luggage}}</span>
                                     </div>
                                     <div class="listing-feature pr-4">
                                         <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
+                                        <span class="number">{{$cars->doors}}</span>
                                     </div>
                                     <div class="listing-feature pr-4">
                                         <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
+                                        <span class="number">{{$cars->passengers}}</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-
-                        <div class="listing d-block  align-items-stretch">
-                            <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_5.jpg')}}" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="listing-contents h-100">
-                                <h3>Nissan Moco</h3>
-                                <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
-                                </div>
-                                <div class="d-block d-md-flex mb-3 border-bottom pb-3">
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
+                                    <p>{{$cars->content}}
                                     </p>
                                     <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
                                 </div>
@@ -178,148 +145,11 @@
                     </div>
 
 
-                    <div class="col-md-6 col-lg-4 mb-4">
-
-                        <div class="listing d-block  align-items-stretch">
-                            <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_4.jpg')}}" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="listing-contents h-100">
-                                <h3>Honda Fitta</h3>
-                                <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
-                                </div>
-                                <div class="d-block d-md-flex mb-3 border-bottom pb-3">
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-
-                        <div class="listing d-block  align-items-stretch">
-                            <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_3.jpg')}}" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="listing-contents h-100">
-                                <h3>Skoda Laura</h3>
-                                <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
-                                </div>
-                                <div class="d-block d-md-flex mb-3 border-bottom pb-3">
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-
-                        <div class="listing d-block  align-items-stretch">
-                            <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_2.jpg')}}" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="listing-contents h-100">
-                                <h3>Mazda LaPuta</h3>
-                                <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
-                                </div>
-                                <div class="d-block d-md-flex mb-3 border-bottom pb-3">
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
 
-                    <div class="col-md-6 col-lg-4 mb-4">
-
-                        <div class="listing d-block  align-items-stretch">
-                            <div class="listing-img h-100 mr-4">
-                                <img src="{{asset('assets/images/car_1.jpg')}}" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="listing-contents h-100">
-                                <h3>Buick LaCrosse</h3>
-                                <div class="rent-price">
-                                    <strong>$389.00</strong><span class="mx-1">/</span>day
-                                </div>
-                                <div class="d-block d-md-flex mb-3 border-bottom pb-3">
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Luggage:</span>
-                                        <span class="number">8</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Doors:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                    <div class="listing-feature pr-4">
-                                        <span class="caption">Passenger:</span>
-                                        <span class="number">4</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
                 </div>
+                @endforeach
                 <div class="row">
                     <div class="col-5">
                         <div class="custom-pagination">
@@ -428,41 +258,41 @@
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Quick Links</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Resources</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Support</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Company</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -58,7 +58,7 @@
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
                                 <li><a href="{{route('index')}}" class="nav-link">Home</a></li>
                                 <li><a href="{{route('listing')}}" class="nav-link">Listing</a></li>
-                                <li><a href="{{route('testimonials')}}" class="nav-link">Testimonials</a></li>
+                                <li><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                                 <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                                 <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                                 <li class="active"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -104,22 +104,22 @@
                         <form action="#" method="post">
                             <div class="form-group row">
                                 <div class="col-md-6 mb-4 mb-lg-0">
-                                    <input type="text" class="form-control" placeholder="First name">
+                                    <input type="text" class="form-control" placeholder="First name" name="fname">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Last name">
+                                    <input type="text" class="form-control" placeholder="Last name" name="lname">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="Email address">
+                                    <input type="text" class="form-control" placeholder="Email address" name="email">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
+                                    <textarea name="message" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -166,41 +166,41 @@
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Quick Links</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Resources</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Support</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Company</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

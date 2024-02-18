@@ -19,6 +19,11 @@ class CategoriesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    public function list()
+    {
+        $categories = Category::get();
+        return view('single', compact('categories'));
+    }
     public function create()
     {
         return view('addcategory');

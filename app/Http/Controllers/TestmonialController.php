@@ -18,6 +18,12 @@ class TestmonialController extends Controller
         $testmonials = Testmonial::get();
         return view('testmonials', compact("testmonials"));
     }
+    public function list()
+    {
+        $testmonials = Testmonial::latest()->take(3)->get();
+        //$testmonials = Testmonial::get();
+        return view('showtestimonials', compact("testmonials"));
+    }
 
     /**
      * Show the form for creating a new resource.

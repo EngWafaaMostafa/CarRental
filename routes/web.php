@@ -5,6 +5,7 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\AdminsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TestmonialController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,24 +55,26 @@ Route::get('deletetestmonial/{id}', [TestmonialController::class, 'destroy']);
 Route::get('contact', function () {
     return view('contact');
 });
+Route::get('blog', function () {
+    return view('blog');
+})->name('blog');
 
 Route::get('about', function () {
     return view('about');
 })->name('about');
 
-Route::get('index', function () {
-    return view('index');
-})->name('index');
+// Route::get('index', function () {
+//     return view('index');
+// })->name('index');
+Route::get('index', [IndexController::class, 'index'])->name('index');
 
-Route::get('blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('listing', [CarController::class, 'list'])->name('listing');
 
+Route::get('showtestimonials', [TestmonialController::class, 'list'])->name('showtestimonials');
 
-Route::get('listing', function () {
-    return view('listing');
-})->name('listing');
-
-Route::get('testimonials', function () {
-    return view('testimonials');
-})->name('testimonials');
+// Route::get('single/{id}', function () {
+//     return view('single');
+// })->name('single');
+Route::get('single/{id}', [CarController::class, 'show'])->name('single');
+//Route::get('single', [CategoriesController::class, 'list'])->name('singlecat');
+//Route::get('single', [CategoriesController::class, 'index'])->name('single');

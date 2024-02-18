@@ -268,6 +268,7 @@
 
 
                                                     <tbody>
+
                                                         @foreach($categories as $categories)
                                                         <tr>
                                                             <td>{{$categories->category}}</td>

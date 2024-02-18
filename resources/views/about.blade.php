@@ -57,8 +57,8 @@
                         <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
                                 <li><a href="{{route('index')}}" class="nav-link">Home</a></li>
-                                <li><a href="listing.html" class="nav-link">Listing</a></li>
-                                <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                                <li><a href="{{route('listing')}}" class="nav-link">Listing</a></li>
+                                <li><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                                 <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                                 <li class="active"><a href="{{route('about')}}" class="nav-link">About</a></li>
                                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -244,43 +244,44 @@
                     <div class="col-lg-8 ml-auto">
                         <div class="row">
                             <div class="col-lg-3">
+
                                 <h2 class="footer-heading mb-4">Quick Links</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Resources</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Support</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Company</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

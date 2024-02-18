@@ -58,7 +58,7 @@
                             <ul class="site-menu main-menu js-clone-nav ml-auto ">
                                 <li><a href="{{route('index')}}" class="nav-link">Home</a></li>
                                 <li><a href="{{route('listing')}}" class="nav-link">Listing</a></li>
-                                <li class="active"><a href="{{route('testimonials')}}" class="nav-link">Testimonials</a></li>
+                                <li class="active"><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                                 <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                                 <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -81,7 +81,7 @@
 
                         <div class="intro">
                             <h1><strong>Testimonials</strong></h1>
-                            <div class="custom-breadcrumbs"><a href="index.html">Home</a> <span class="mx-2">/</span>
+                            <div class="custom-breadcrumbs"><a href="{{route('index')}}">Home</a> <span class="mx-2">/</span>
                                 <strong>Testimonials</strong>
                             </div>
                         </div>
@@ -90,8 +90,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <div class="site-section bg-light">
             <div class="container">
@@ -102,143 +100,25 @@
                     </div>
                 </div>
                 <div class="row">
+                    @foreach($testmonials as $testmonials)
                     <div class="col-lg-4 mb-4">
                         <div class="testimonial-2">
                             <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
+                                <p>{{$testmonials->content}}</p>
                             </blockquote>
                             <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image" class="img-fluid mr-3">
+                                <img src="{{asset('assets/images/'.$testmonials->image)}}" alt="Image" class="img-fluid mr-3">
                                 <div class="author-name">
-                                    <span class="d-block">Mike Fisher</span>
-                                    <span>Owner, Ford</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_2.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Jean Stanley</span>
-                                    <span>Traveler</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_3.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Katie Rose</span>
-                                    <span>Customer</span>
+                                    <span class="d-block">{{$testmonials->name}}</span>
+                                    <span>{{$testmonials->position}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Mike Fisher</span>
-                                    <span>Owner, Ford</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_2.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Jean Stanley</span>
-                                    <span>Traveler</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_3.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Katie Rose</span>
-                                    <span>Customer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Mike Fisher</span>
-                                    <span>Owner, Ford</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_2.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Jean Stanley</span>
-                                    <span>Traveler</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="testimonial-2">
-                            <blockquote class="mb-4">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam.
-                                    Ipsam, nam, voluptatum"</p>
-                            </blockquote>
-                            <div class="d-flex v-card align-items-center">
-                                <img src="{{asset('assets/images/person_3.jpg')}}" alt="Image" class="img-fluid mr-3">
-                                <div class="author-name">
-                                    <span class="d-block">Katie Rose</span>
-                                    <span>Customer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -277,41 +157,41 @@
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Quick Links</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Resources</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Support</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
                                 <h2 class="footer-heading mb-4">Company</h2>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

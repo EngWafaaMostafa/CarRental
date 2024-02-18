@@ -15,6 +15,11 @@ class CarController extends Controller
         $cars = Car::get();
         return view('cars', compact("cars"));
     }
+    public function list()
+    {
+        $cars = Car::get();
+        return view('listing', compact("cars"));
+    }
     public function create()
     {
         $categories = Category::get();
@@ -35,8 +40,9 @@ class CarController extends Controller
     }
     public function show(string $id)
     {
+        $categories = Category::get();
         $cars = Car::findOrFail($id);
-        return view('cars', compact('cars'));
+        return view('single', compact('cars', 'categories'));
     }
     public function edit(string $id)
     {
