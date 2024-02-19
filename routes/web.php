@@ -18,9 +18,9 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 //Route::get('/', [CarController::class, 'index'])->name('index');
 
 //Auth::routes(["verify" => true]);
@@ -84,3 +84,7 @@ Route::post('sendcontact', [IndexController::class, 'store'])->name('sendcontact
 
 Route::get('message', [IndexController::class, 'index'])->name('message');
 Route::get('showmessage/{id}', [IndexController::class, 'show'])->name('showmessage');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
