@@ -17,6 +17,7 @@ return new class extends Migration
             $table->longText('message');
             $table->string('lname');
             $table->string('email');
+            $table->boolean("read")->default(0);
             $table->timestamps();
         });
     }

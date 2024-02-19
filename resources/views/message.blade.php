@@ -267,7 +267,7 @@
                                                     </thead>
                                                     <tbody>
                                                         @foreach($contacts as $contacts)
-                                                        <tr>
+                                                        <tr class="{{!($message->read)?'text-bold':''}}">
                                                             <td>{{$contacts->fname}}</td>
                                                             <td>{{$contacts->lname}}</td>
                                                             <td>{{$contacts->email}}</td>
@@ -295,7 +295,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">wafaa mostafa</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>

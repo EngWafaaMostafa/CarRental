@@ -89,6 +89,8 @@ Route::group(['middleware' => ['auth', 'auth.user_info']], function () {
 
     Route::get('showmessage/{id}', [IndexController::class, 'show'])->middleware('verified')->name('showmessage');
 
+    Route::get("unreadmessage", [IndexController::class, "unread"])->name("unread");
+
     Auth::routes(['verify' => true]);
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

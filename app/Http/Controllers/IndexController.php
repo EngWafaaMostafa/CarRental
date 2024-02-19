@@ -19,6 +19,12 @@ class IndexController extends Controller
         $contacts = Contact::get();
         return view('message', compact('contacts'));
     }
+    function unread()
+    {
+        $contacts = Contact::where("read", 0)->get();
+
+        return view("unreadmessage", compact("contacts"));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -57,6 +63,7 @@ class IndexController extends Controller
     public function show(string $id)
     {
         $contacts = Contact::findOrFail($id);
+        $contacts->update(["read" => 1]);
         return view('showmessage', compact('contacts'));
     }
 
