@@ -16,8 +16,8 @@ class CarController extends Controller
         return view('cars', compact("cars"));
     }
     public function list()
-    {
-        $cars = Car::get();
+    {   //$teachers=Teacher::paginate(1);
+        $cars = Car::paginate(1);
         return view('listing', compact("cars"));
     }
     public function indexhome()
