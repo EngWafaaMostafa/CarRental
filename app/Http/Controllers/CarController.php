@@ -20,6 +20,12 @@ class CarController extends Controller
         $cars = Car::get();
         return view('listing', compact("cars"));
     }
+    public function indexhome()
+    {
+        $cars = Car::latest()->take(3)->get();
+
+        return view('index', compact("cars"));
+    }
     public function create()
     {
         $categories = Category::get();

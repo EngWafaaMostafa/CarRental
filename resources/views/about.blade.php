@@ -61,7 +61,7 @@
                                 <li><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                                 <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                                 <li class="active"><a href="{{route('about')}}" class="nav-link">About</a></li>
-                                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                                <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -251,7 +251,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -261,7 +261,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -271,7 +271,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -281,7 +281,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

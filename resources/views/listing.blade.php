@@ -262,7 +262,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -272,7 +272,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -282,7 +282,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">
@@ -292,7 +292,7 @@
                                     <li><a href="{{route('showtestimonials')}}">Testimonials</a></li>
                                     <li><a href="#">Terms of Service</a></li>
                                     <li><a href="#">Privacy</a></li>
-                                    <li><a href="{{route('showtestimonials')}}">Contact Us</a></li>
+                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

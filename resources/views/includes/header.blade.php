@@ -30,7 +30,7 @@
                             <li><a href="{{route('showtestimonials')}}" class="nav-link">Testimonials</a></li>
                             <li><a href="{{route('blog')}}" class="nav-link">Blog</a></li>
                             <li><a href="{{route('about')}}" class="nav-link">About</a></li>
-                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
