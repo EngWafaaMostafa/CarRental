@@ -27,7 +27,7 @@ use Illuminate\Auth\Notifications\VerifyEmail;
 
 Route::group(['middleware' => ['auth', 'auth.user_info']], function () {
     Route::get('/', [CarController::class, 'indexhome'])->middleware('verified')->name('index');
-
+    Route::get('index', [CarController::class, 'indexhome'])->name('index');
     //Auth::routes(["verify" => true]);
     Route::get('adduser', [AdminsController::class, 'create'])->middleware('verified')->name('adduser');
     Route::post('adduser', [AdminsController::class, 'store'])->middleware('verified')->name('adduser');
@@ -72,7 +72,7 @@ Route::group(['middleware' => ['auth', 'auth.user_info']], function () {
     // Route::get('index', function () {
     //     return view('index');
     // })->name('index');
-    Route::get('index', [CarController::class, 'indexhome'])->middleware('verified')->name('index');
+
 
     Route::get('listing', [CarController::class, 'list'])->middleware('verified')->name('listing');
 
@@ -91,7 +91,8 @@ Route::group(['middleware' => ['auth', 'auth.user_info']], function () {
 
     Route::get("unreadmessage", [IndexController::class, "unread"])->name("unread");
 
-    Auth::routes(['verify' => true]);
+
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
+Auth::routes(['verify' => true]);
